@@ -18,10 +18,11 @@ input[type=number] {
     outline: none;
     background: black;
     color: white;
-    font-size: 10cm;
+    font-size: 8cm;
     text-align: center;
 }
 
 ::placeholder{
-    color: grey;
+    color: #283747;
+    
 }

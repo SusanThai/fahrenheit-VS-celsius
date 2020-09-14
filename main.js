@@ -5,23 +5,23 @@ function roundNum(num){
     return Math.round(num*100)/100;
 }
 
-function cToF(){
-    const cTemp = parseFloat(celsiusInput.value);
-    const fTemp = (cTemp * (9/5)) + 32;
+function celsiusToFahrenheit(){
+    const celsius = parseFloat(celsiusInput.value);
+    const fahrenheit = (celsius * (9/5)) + 32;
 
-    fahrenheitInput.value = roundNum(fTemp); 
+    fahrenheitInput.value = roundNum(fahrenheit); 
 }
 
-function fToC(){
-    const fTemp = parseFloat(fahrenheitInput.value);
-    const cTemp = (fTemp - 32) * (5/9);
+function fahrenheitToCelsius(){
+    const fahrenheit = parseFloat(fahrenheitInput.value);
+    const celsius = (fahrenheit - 32) * (5/9);
     
-    celsiusInput.value = roundNum(cTemp);
+    celsiusInput.value = roundNum(celsius);
 }
 
 function main(){
-celsiusInput.addEventListener('input', cToF);
-fahrenheitInput.addEventListener('input',fToC);
+celsiusInput.addEventListener('input', celsiusToFahrenheit);
+fahrenheitInput.addEventListener('input',fahrenheitToCelsius);
 }
 
 main();
